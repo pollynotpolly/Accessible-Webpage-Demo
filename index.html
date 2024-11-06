@@ -25,18 +25,28 @@
         }
 
         h1 {
-         font-size: 4.5rem; /* Increase the font size */
-         color: #1C1E0D; /* Ensure good contrast */
+         font-size: 4.5rem; 
+         color: var (--text-color); /* Ensure good contrast */
          margin-bottom: 1rem; /* Add some space below the h1 */
          max-width: none;
+         border-bottom: 2px solid #dbdbdb; /* Add a border for better visibility */
         }
 
         /* High contrast mode */
         [data-theme="high-contrast"] {
-            --text-color: #fff;
-            --bg-color: #000;
-            --link-color: #00ff00;
+         --text-color: #fff;
+         --bg-color: #000;
+         --link-color: #00ff00;
         }
+
+        [data-theme="high-contrast"] .resources-bar {
+         background: #000;
+         border: 1px solid #fff;
+        }
+
+[data-theme="high-contrast"] .resources-bar a {
+    color: #00ff00;
+}
 
         /* Add this to your existing CSS */
 nav {
@@ -50,7 +60,8 @@ nav {
   padding: 10px;
   background-color: #f8d2f3 ;
   color: black;
-  border: none;
+  border: 1px solid;
+  border-bottom: 3px solid;
   text-align: left;
   cursor: pointer;
   font-size: 1rem;
@@ -116,7 +127,7 @@ nav {
         }
 
         .controls {
-            background: #FFF7E3;
+            --bg-color: #FFF7E3;
             padding: 20px;
             border-radius: 8px;
             margin: 20px 0;
@@ -140,6 +151,7 @@ nav {
             background: var(--link-color);
             color: #1C1E0D;
             border: 1px solid;
+            border-bottom: 3px solid;
             padding: 8px 16px;
             border-radius: 4px;
             cursor: pointer;
@@ -154,7 +166,7 @@ nav {
         }
 
         .explanation {
-            background: #FFF7E3;
+            --bg-color: #FFF7E3;
             padding: 15px;
             border-left: 4px solid var(--link-color);
             margin: 10px 0;
@@ -202,11 +214,12 @@ nav {
     
     <header role="banner">
         <h1>Web Accessibility - it's more than just alt text</h1>
-        <p>Welcome to my fully accesisble webpage demonstrating key aspects of accessibility</p>
+        <p>Welcome to my fully accesisble webpage demonstrating the key aspects of accessibility I learnt whilst completeing the W3Cx Introduction to Web Accessibility course.</p>
     </header>
 
     <nav role="navigation" aria-label="Main navigation">
-        <button aria-expanded="false" aria-controls="toc-menu" id="toc-toggle"><strong>Table of Contents</strong>
+        <button aria-expanded="false" aria-controls="toc-menu" id="toc-toggle">
+            Table of Contents
           <span class="arrow-icon" aria-hidden="true">▼</span>
         </button>
         <ul id="toc-menu" class="dropdown-menu" hidden>
@@ -260,10 +273,6 @@ nav {
                     </ul>
                 </div>
                 
-                <div class="demo-area">
-                    <button onclick="showMessage('Button clicked!')" aria-label="Demo button for keyboard navigation">
-                        Test Keyboard Navigation
-                    </button>
                 </div>
             </section>
     
@@ -276,6 +285,7 @@ nav {
                         <li>Adjustable text size</li>
                         <li>Clear visual hierarchy</li>
                         <li>Sufficient color contrast</li>
+                        <li>Acessible friendly fonts and text spacing</li>
                     </ul>
                 </div>
             </section>
@@ -287,11 +297,39 @@ nav {
                     <ul>
                         <li>Proper ARIA labels</li>
                         <li>Semantic HTML structure</li>
-                        <li>Hidden elements for screen readers</li>
+                        <li>Hidden elements for screen readers, like setting of the page language</li>
                         <li>Descriptive link text</li>
+                        <li>Descriptive page title so screen reader users can easily identify which tab to go to</li>
                     </ul>
                 </div>
             </section>
+
+            <section id="testing-tools" class="demo-section">
+                <h2>5. Tools for Testing Web Accessibility</h2>
+                <div class="explanation">
+                  <p>Testing your website for accessibility is crucial to ensure it can be used by everyone. Here are some popular tools that can help you evaluate and improve your site's accessibility:</p>
+                </div>
+                <div class="tool-list">
+                  <h3>Recommended Accessibility Testing Tools:</h3>
+                  <ul>
+                    <li>
+                      <strong>WAVE (Web Accessibility Evaluation Tool)</strong>
+                      <p>A suite of evaluation tools that help authors make their web content more accessible. It provides visual feedback about accessibility directly within your page.</p>
+                      <a href="https://wave.webaim.org/" target="_blank" rel="noopener">Try WAVE</a>
+                    </li>
+                    <li>
+                      <strong>axe DevTools</strong>
+                      <p>A browser extension that identifies accessibility issues and provides suggestions for fixing them. Available for Chrome, Firefox, and Edge.</p>
+                      <a href="https://www.deque.com/axe/devtools/" target="_blank" rel="noopener">Get axe DevTools</a>
+                    </li>
+                    <li>
+                      <strong>Color Contrast Analyzer</strong>
+                      <p>A tool to check color contrasts against WCAG 2.1 guidelines for text and non-text contrast.</p>
+                      <a href="https://developer.paciellogroup.com/resources/contrastanalyser/" target="_blank" rel="noopener">Download Color Contrast Analyzer</a>
+                    </li>
+                  </ul>
+                </div>
+              </section>
         </main>
 
         <section class="resources-bar">
