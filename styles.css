@@ -15,6 +15,12 @@ body {
     max-width: 1050px;
     margin: 0 auto;
     padding: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+p, li {
+    font-size: 1rem; /* Relative to root element */
 }
 
 h1 {
@@ -133,6 +139,8 @@ nav {
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
+    flex: 1 1 300px; /* Grow, shrink, and base width */
+    margin: 10px;
 }
 
 
@@ -195,7 +203,8 @@ button:focus {
 
 
 .page-grid {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: 2rem;
     margin: 2rem 0;

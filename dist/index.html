@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accessible Web Demonstration - Improving Inclusivity."</title>
+      <script type="module" crossorigin src="/assets/index-DaCkEpdR.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/index-BMh4hQe9.css">
+    </head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <header role="banner">
+        <h1>Web Accessibility - it's more than just alt text</h1>
+        <p>A demonstration website to show the key aspects of web accessibility and help to improve inclusivity.</p>
+    </header>
+
+    <nav role="navigation" aria-label="Main navigation">
+        <button aria-expanded="false" aria-controls="toc-menu" aria-label="Toggle table of contents" id="toc-toggle">
+            Table of Contents
+          <span class="arrow-icon" aria-hidden="true">▼</span>
+        </button>
+        <ul id="toc-menu" class="dropdown-menu" hidden>
+          <li><a href="#basics">Accessibility Basics</a></li>
+          <li><a href="#keyboard">Keyboard Navigation</a></li>
+          <li><a href="#visual">Visual Accessibility</a></li>
+          <li><a href="#screen-readers">Screen Reader Support</a></li>
+        </ul>
+      </nav>
+
+    <main id="main" role="main">
+        <section class="controls" aria-label="Accessibility Controls">
+            <h2>Customize Your Experience</h2>
+            <div role="group" aria-label="Display preferences">
+                <button id="toggle-theme" aria-pressed="false">Toggle High Contrast</button>
+                <button id="increase-font">Increase Text Size</button>
+                <button id="decrease-font">Decrease Text Size</button>
+            </div>
+        </section>
+
+        <div class="page-grid">
+            <section id="basics" class="demo-section">
+                <h2>1. Accessibility Basics</h2>
+                <div class="explanation">
+                    <h3>Key Principles:</h3>
+                    <ul>
+                        <li><strong>Semantic HTML structure:</strong> Using proper HTML elements like &lt;nav&gt;, &lt;main&gt;, &lt;header&gt; instead of generic &lt;div&gt;s</li>
+                        <li><strong>Proper heading hierarchy:</strong> Using h1-h6 in correct order (see this page's structure as an example)</li>
+                        <li><strong>ARIA labels and roles:</strong> Adding context for screen readers (example: role="navigation" on our nav element)</li>
+                        <li><strong>Alt text for images:</strong> Providing descriptive alternatives for visual content</li>
+                    </ul>
+                </div>
+                
+                <div class="demo-area">
+                    <img src="/assets/Web-Accessibility%20image-DQrURmhy.jpg" alt="Illustration depicting a vibrant scene of diverse individuals using laptops and phones"/>
+                    <p>This image has proper alt text. Try using a screen reader to hear it!</p>
+                </div>
+            </section>
+    
+            <section id="keyboard" class="demo-section">
+                <h2>2. Keyboard Navigation</h2>
+                <div class="explanation">
+                    <p>Try using Tab, Enter, and Space to navigate this page. Notice how:</p>
+                    <ul>
+                        <li><strong>Interactive elements are focusable</strong></li>
+                        <li><strong>Focus indicators are clearly visible</strong></li>
+                        <li><strong>Links help jump to main content</strong></li>
+                        You'll  notice how the skip to main content link is only visible when tabbed to. This design is intentional and considered a best practice for several reasons:
+                        <li><strong>Accessibility:</strong> It remains fully accessible to keyboard users and screen reader users who benefit from such links.</li>
+                        <li><strong>Keyboard navigation:</strong> It appears when needed (i.e., when a user starts tabbing through the page), making it available to those who rely on keyboard navigation.</li>
+                    </ul>
+                </div>
+                
+                </div>
+            </section>
+    
+            <section id="visual" class="demo-section">
+                <h2>3. Visual Accessibility</h2>
+                <div class="explanation">
+                    <p>This page demonstrates:</p>
+                    <ul>
+                        <li>High contrast mode option</li>
+                        <li>Adjustable text size</li>
+                        <li>Clear visual hierarchy</li>
+                        <li>Sufficient color contrast</li>
+                        <li>Acessible friendly fonts and text spacing</li>
+                        <li>Ensure text wraps properly so regardless of text size users only need to scroll vertically and not horizontally</li>
+                        <p>These tools are often just written into the code but for demonstration purposes I've given clear buttons to play with.</p>
+                        <p>Try toggling the high contrast mode and adjusting the text size to see how it affects the page.</p>
+                    </ul>
+                </div>
+            </section>
+    
+            <section id="screen-readers" class="demo-section">
+                <h2>4. Screen Reader Support</h2>
+                <div class="explanation">
+                    <p>This page includes:</p>
+                    <ul>
+                        <li>Proper ARIA labels</li>
+                        <li>Semantic HTML structure</li>
+                        <li>Hidden elements for screen readers, like setting of the page language</li>
+                        <li>Descriptive link text</li>
+                        <li>Descriptive page title so screen reader users can easily identify which tab to go to</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="accessible-media" class="demo-section">
+                <h2>5. Accessible Media</h2>
+                <div class="explanation">
+                  <p>Accessible media is crucial for ensuring all users can access your content. This section explores whats needed:</p>
+                  <ul>
+                    <li><strong>Closed captions:</strong> Text synchronized with the video for deaf or hard-of-hearing users</li>
+                    <li><strong>Audio descriptions:</strong> Narration of visual elements for blind or low-vision users</li>
+                    <li><strong>Transcript:</strong> Text alternative for the entire video content</li>
+                    <li><strong>Accessible video player:</strong> Keyboard-navigable controls and screen reader support</li>
+                    <p>Extensions such as accessibiltiy.video enables accessibility options for various video players on the web based on user preferences </p>
+                    <a href="https://accessibility.video/en/fast-access-to-online-videos-for-everyone/" target="_blank" rel="noopener">Try accessibiltiy.video </a>
+                  </ul>
+                </div>
+                <!-- <div class="demo-area">
+                  <h3>Sample Accessible Video</h3>
+                  <video controls preload="metadata">
+                    <source src="path/to/your/video.mp4" type="video/mp4">
+                    <track kind="captions" src="path/to/captions.vtt" srclang="en" label="English" default>
+                    <track kind="descriptions" src="path/to/descriptions.vtt" srclang="en" label="English">
+                    Your browser does not support the video tag.
+                  </video>
+                  <button id="toggle-transcript" aria-expanded="false" aria-controls="video-transcript">Show Transcript</button>
+                  <div id="video-transcript" hidden>
+                    <h4>Video Transcript</h4>
+                    <p>[Insert your full video transcript here]</p>
+                  </div>
+                </div> -->
+              </section>
+
+            <section id="testing-tools" class="demo-section">
+                <h2>6. Tools for Testing Web Accessibility</h2>
+                <div class="explanation">
+                  <p>Testing your website for accessibility is crucial to ensure it can be used by everyone. Here are some popular tools that can help you evaluate and improve your site's accessibility:</p>
+                </div>
+                <div class="tool-list">
+                  <h3>Recommended Accessibility Testing Tools:</h3>
+                  <ul>
+                    <li>
+                      <strong>WAVE (Web Accessibility Evaluation Tool)</strong>
+                      <p>A suite of evaluation tools that help authors make their web content more accessible. It provides visual feedback about accessibility directly within your page.</p>
+                      <a href="https://wave.webaim.org/" target="_blank" rel="noopener">Try WAVE</a>
+                    </li>
+                    <li>
+                      <strong>axe DevTools</strong>
+                      <p>A browser extension that identifies accessibility issues and provides suggestions for fixing them. Available for Chrome, Firefox, and Edge.</p>
+                      <a href="https://www.deque.com/axe/devtools/" target="_blank" rel="noopener">Get axe DevTools</a>
+                    </li>
+                    <li>
+                      <strong>Color Contrast Analyzer</strong>
+                      <p>A tool to check color contrasts against WCAG 2.1 guidelines for text and non-text contrast.</p>
+                      <a href="https://developer.paciellogroup.com/resources/contrastanalyser/" target="_blank" rel="noopener">Download Color Contrast Analyzer</a>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+        </main>
+
+        <section role="complementary" class="resources-bar">
+            <h2>Quick Links to Resources</h2>
+            <ul>
+                <li><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener">Web Content Accessibility Guidelines (WCAG) 2.1.</a></li>
+                <li><a href="https://www.w3.org/WAI/fundamentals/" target="_blank" rel="noopener">W3C Accessibility Fundamentals</a></li>
+                <li><a href="https://webaim.org/" target="_blank" rel="noopener">WebAIM Resources</a></li>
+            </ul>
+        </section>
+    
+        <footer role="page creater">
+            <p>Page creator Polly Randle - feel free to explore my HTML code to seeit all in action!</p>
+        </footer>
+    
+    </body>
+    </html>

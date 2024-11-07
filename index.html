@@ -83,7 +83,8 @@
                         <li>Clear visual hierarchy</li>
                         <li>Sufficient color contrast</li>
                         <li>Acessible friendly fonts and text spacing</li>
-                        <p>These are often just written into the code but fir demonstration purposes I've given clear buttons to play with</p>
+                        <li>Ensure text wraps properly so regardless of text size users only need to scroll vertically and not horizontally</li>
+                        <p>These tools are often just written into the code but for demonstration purposes I've given clear buttons to play with.</p>
                         <p>Try toggling the high contrast mode and adjusting the text size to see how it affects the page.</p>
                     </ul>
                 </div>
@@ -103,8 +104,37 @@
                 </div>
             </section>
 
+            <section id="accessible-media" class="demo-section">
+                <h2>5. Accessible Media</h2>
+                <div class="explanation">
+                  <p>Accessible media is crucial for ensuring all users can access your content. This section explores whats needed:</p>
+                  <ul>
+                    <li><strong>Closed captions:</strong> Text synchronized with the video for deaf or hard-of-hearing users</li>
+                    <li><strong>Audio descriptions:</strong> Narration of visual elements for blind or low-vision users</li>
+                    <li><strong>Transcript:</strong> Text alternative for the entire video content</li>
+                    <li><strong>Accessible video player:</strong> Keyboard-navigable controls and screen reader support</li>
+                    <p>Extensions such as accessibiltiy.video enables accessibility options for various video players on the web based on user preferences </p>
+                    <a href="https://accessibility.video/en/fast-access-to-online-videos-for-everyone/" target="_blank" rel="noopener">Try accessibiltiy.video </a>
+                  </ul>
+                </div>
+                <!-- <div class="demo-area">
+                  <h3>Sample Accessible Video</h3>
+                  <video controls preload="metadata">
+                    <source src="path/to/your/video.mp4" type="video/mp4">
+                    <track kind="captions" src="path/to/captions.vtt" srclang="en" label="English" default>
+                    <track kind="descriptions" src="path/to/descriptions.vtt" srclang="en" label="English">
+                    Your browser does not support the video tag.
+                  </video>
+                  <button id="toggle-transcript" aria-expanded="false" aria-controls="video-transcript">Show Transcript</button>
+                  <div id="video-transcript" hidden>
+                    <h4>Video Transcript</h4>
+                    <p>[Insert your full video transcript here]</p>
+                  </div>
+                </div> -->
+              </section>
+
             <section id="testing-tools" class="demo-section">
-                <h2>5. Tools for Testing Web Accessibility</h2>
+                <h2>6. Tools for Testing Web Accessibility</h2>
                 <div class="explanation">
                   <p>Testing your website for accessibility is crucial to ensure it can be used by everyone. Here are some popular tools that can help you evaluate and improve your site's accessibility:</p>
                 </div>
@@ -141,9 +171,9 @@
         </section>
     
         <footer role="page creater">
-            <p>Page creator Polly Randle</p>
+            <p>Page creator Polly Randle - feel free to explore my HTML code to seeit all in action!</p>
         </footer>
     
-        <script src="index.js"></script>
+        <script type="module" src="index.js"></script>
     </body>
     </html>
