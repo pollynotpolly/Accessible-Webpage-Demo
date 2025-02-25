@@ -24,7 +24,7 @@ p, li {
 }
 
 h1 {
-    font-size: 4.5rem; 
+    font-size: 3.5rem; 
     color: var (--text-color); /* Ensure good contrast */
     margin-bottom: 1rem; /* Add some space below the h1 */
     max-width: none;
