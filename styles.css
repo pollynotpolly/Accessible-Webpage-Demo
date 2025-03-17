@@ -24,11 +24,19 @@ p, li {
 }
 
 h1 {
-    font-size: 3.5rem; 
-    color: var (--text-color); /* Ensure good contrast */
-    margin-bottom: 1rem; /* Add some space below the h1 */
-    max-width: none;
-    border-bottom: 2px solid #dbdbdb; /* Add a border for better visibility */
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    max-width: 100%;
+    border-bottom: 2px solid #dbdbdb;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+    }
 }
 
 /* High contrast mode */
